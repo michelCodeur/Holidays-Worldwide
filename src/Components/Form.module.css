@@ -1,0 +1,29 @@
+button {
+    margin:1em;
+  border:none;
+  padding:0.25em 3em 0.25em 1em;
+  text-align:left;
+  background: linear-gradient(-120deg, transparent 1em, #0099C3 1.05em , #0099C3 1.5em, transparent 1.45em, transparent 2em, #0099C3 2.05em) top no-repeat,
+    linear-gradient(300deg, transparent 1em, #0099C3 1.05em , #0099C3 1.5em, transparent 1.45em, transparent 2em, #0099C3 2.05em) bottom no-repeat ;
+  background-size: 100% 50%;;
+  background-size: 100% 50%;
+  color: solid black;
+  font-weight: bolder;
+  text-align: center;
+
+}
+.learnmore {
+    height: 80px;
+  width: 150px;
+  background-color: #660077;
+  border-radius: 10px;
+  position: relative;
+}
+.learnmore::after {
+  content: 'learnmore';
+  border: 15px solid transparent;
+  border-top: 30px solid #660077;
+  position: absolute;
+  bottom: -30px;
+  right: 0px;
+}
