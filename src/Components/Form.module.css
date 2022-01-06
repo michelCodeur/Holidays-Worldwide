@@ -1,29 +1,79 @@
-button {
-    margin:1em;
-  border:none;
-  padding:0.25em 3em 0.25em 1em;
-  text-align:left;
-  background: linear-gradient(-120deg, transparent 1em, #0099C3 1.05em , #0099C3 1.5em, transparent 1.45em, transparent 2em, #0099C3 2.05em) top no-repeat,
-    linear-gradient(300deg, transparent 1em, #0099C3 1.05em , #0099C3 1.5em, transparent 1.45em, transparent 2em, #0099C3 2.05em) bottom no-repeat ;
-  background-size: 100% 50%;;
-  background-size: 100% 50%;
-  color: solid black;
-  font-weight: bolder;
-  text-align: center;
+body {
+  background-color: rgb(193, 236, 236);
+  font-family: 'Montserrat', sans-serif;
+  font: inherit;
+}
+
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  align-content: center;
+  flex-direction: column;
+  flex-flow: column wrap;
+}
+
+.form__container {
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+
+li {
+margin: 20px 0 20px 0;
 
 }
-.learnmore {
-    height: 80px;
-  width: 150px;
-  background-color: #660077;
-  border-radius: 10px;
-  position: relative;
+
+label {
+  margin-right: 30px;
+  font-size: 25px;
+  font-weight: bolder; 
 }
-.learnmore::after {
-  content: 'learnmore';
-  border: 15px solid transparent;
-  border-top: 30px solid #660077;
-  position: absolute;
-  bottom: -30px;
-  right: 0px;
+
+input {
+  border-color: yellowgreen;
+  column-width: 100px;
+  font: inherit;
+  font-weight: inherit;
+  text-align: center;
+  width: 200px;
+  height: 25px;
+  background-color: rgb(228, 236, 236);
+  
+}
+label, input {
+display: inline-flex;
+}
+span {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+
+header {
+  text-align: center;
+}
+.learnmore__button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.learnmore__button:hover {background-color: #3e8e41}
+
+.learnmore__button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
