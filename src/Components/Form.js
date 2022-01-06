@@ -18,10 +18,6 @@ function Form(props) {
 						<label htmlFor='holiday__name'> Holiday Name : </label>
 						<input placeholder='Holiday Goes Here' type='text' />
 					</li>
-					<li className='form__item'>
-						<label htmlFor='holiday__language'> Holiday language : </label>
-						<input placeholder='Language Goes Here' type='text' />
-					</li>
 				</ul>
 				<span>
 					<button className='learnmore__button'>

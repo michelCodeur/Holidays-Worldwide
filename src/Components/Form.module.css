@@ -15,11 +15,6 @@ ul {
   flex-flow: column wrap;
 }
 
-.form__container {
-  background-color: whitesmoke;
-  border-radius: 5px;
-}
-
 li {
 margin: 20px 0 20px 0;
 
@@ -56,21 +51,21 @@ header {
   text-align: center;
 }
 .learnmore__button {
-  display: inline-block;
+  display: flex;
   padding: 15px 25px;
   font-size: 24px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   outline: none;
-  color: #fff;
-  background-color: #4CAF50;
+  color: rgb(221, 230, 223);
+  background-color: #08a80d;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
 
-.learnmore__button:hover {background-color: #3e8e41}
+.learnmore__button:hover {background-color: #0bc911}
 
 .learnmore__button:active {
   background-color: #3e8e41;
