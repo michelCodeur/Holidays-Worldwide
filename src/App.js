@@ -7,46 +7,59 @@ import './Components/Form.module.css';
 function App() {
 	const searchOptions = {
 		key: process.env.REACT_APP_HOLIDAYS_API_KEY,
-		api: 'https://calendarific.com/api/v2/holidays?&api_key=',
-		country_endpoint: '&country',
-		year_endpoint: '&year',
+		api: 'https://calendarific.com/api/v2',
 	};
+
+
 	const [holidays, setHolidays] = useState([]);
-	const [lastSearch, setLastSearch] = useState('');
-	const [serachString, setSearchString] = useState('');
+	const [searchcountry, setSearchCountry] = useState('BJ');
+  const [searchyear, setSearchYear] = useState('2000');
+	const [searchString, setSearchString] = useState('');
 
 	useEffect(() => {
 		getResults();
 	}, []);
 
 	function getResults(serachString) {
-		const url = `${searchOptions.api}${searchOptions.key}${searchOptions.country_endpoint}${searchOptions.year_endpoint}`;
+		const url = `${searchOptions.api}/holidays?&api_key=${searchOptions.key}&country=${searchcountry}&year=${searchyear}`;
+
+    console.log(url);
 		fetch(url)
-			.then((res) => res.json())
-			.then((res) => {
-				setHolidays(res.data);
-				setLastSearch(serachString);
+			.then((response) => response.json())
+			.then((response) => {
+				setHolidays(response.holidays);
+
+				console.log(response.holidays);
+				setSearchCountry(searchcountry);
+        setSearchYear(searchyear);
 				setSearchString('');
 			})
 			.catch(console.error);
 	}
 
-  function handleChange(event) {
-    serachString(event.target.value);
+	function handleCountry(event) {
+		setSearchCountry(event.target.value);
+	}
+
+  function handleYear(event) {
+    setSearchYear(event.target.value);
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    getResults();
-  }
+	function handleSubmit(event) {
+		event.preventDefault();
+		getResults();
+	}
 
 	return (
-		<div className='App'>
+		<div>
 			<Header />
-			<Form holidays={holidays}/>
-			<SearchResults handleChange={handleChange}
-                     handleSubmit={handleSubmit}
-                     serachString={serachString}/>
+			<Form holidays={holidays} />
+			<SearchResults
+				handleCountry={handleCountry}
+        handleYear={handleYear}
+				handleSubmit={handleSubmit}
+				searchString={searchString}
+			/>
 		</div>
 	);
 }

@@ -1,22 +1,28 @@
 import React from 'react';
 import "./Form.module.css";
 
-function Form(props) {
+function Form({handleCountry, handleYear, handleSubmit }) {
     return (
-			<form>
+			<form className='main__form'>
 				<ul className='form__container'>
 					<li className='form__item'>
 						<label htmlFor='name'> Country Name : </label>
-						<input placeholder='Country Is Required' type='text' />
+						<input 
+                        placeholder='2 Letters Country Code' type='text'
+                        name='searchString'
+                        required
+                        onChange={handleCountry}
+                        
+                        />
 					</li>
 					<li className='form__item'>
 						<label htmlFor='year'> Year : </label>
-						<input placeholder='Year Is Required' type='text' />
-					</li>
-
-					<li className='form__item'>
-						<label htmlFor='holiday__name'> Holiday Name : </label>
-						<input placeholder='Holiday Goes Here' type='text' />
+						<input placeholder='4 Digits YEAR' 
+                        type='text' 
+                        name='searchString'
+                        required
+                        onChange={handleYear}
+                        />
 					</li>
 				</ul>
 				<span>
@@ -24,7 +30,8 @@ function Form(props) {
 						<h2> Learn More </h2>
 					</button>
 					<button className='home__button'>Home</button>
-					<button className='showresults__button' type='submit'>
+					<button className='showresults__button' type='submit'
+                    onClick={handleSubmit}>
 						<h4>
 							SHOW <br /> RESULTS
 						</h4>
