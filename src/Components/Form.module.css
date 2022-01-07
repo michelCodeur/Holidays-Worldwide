@@ -1,81 +1,80 @@
 body {
-  font-family: 'Montserrat', sans-serif;
-  font: inherit;
+	font-family: 'Montserrat', sans-serif;
+	font: inherit;
 }
 .main__form {
-  background-color: rgb(193, 236, 236);
+	background-color: rgb(193, 236, 236);
+
 }
 .header {
-  background-color: gray;
-  box-sizing: border-box;
-  border: 5px solid black;
+	background-color: gray;
+	box-sizing: border-box;
+	border: 5px solid black;
 }
 
-
 ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-  justify-items: center;
-  align-content: center;
-  flex-direction: column;
-  flex-flow: column wrap;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-around;
+
+	align-content: center;
+	flex-direction: column;
+	flex-flow: row wrap;
 }
 
 li {
-margin: 20px 0 20px 0;
-
+	margin: 20px 0 20px 0;
 }
 
 label {
-  margin-right: 30px;
-  font-size: 25px;
-  font-weight: bolder; 
+	margin-right: 30px;
+	font-size: 25px;
+	font-weight: bolder;
 }
 
 input {
-  border-color: yellowgreen;
-  column-width: 100px;
-  font: inherit;
-  font-weight: inherit;
-  text-align: center;
-  width: 200px;
-  height: 25px;
-  background-color: rgb(228, 236, 236);
-  
+	border-color: yellowgreen;
+	column-width: 100px;
+	font: inherit;
+	font-weight: inherit;
+	text-align: center;
+	width: 155px;
+	height: 25px;
+	background-color: rgb(228, 236, 236);
 }
-label, input {
-display: inline-flex;
+label,
+input {
+	display: inline-flex;
 }
 span {
-  display: flex;
-  justify-content: space-between;
-  
+	display: flex;
+	justify-content: space-between;
 }
-
 
 header {
-  text-align: center;
+	text-align: center;
 }
 .learnmore__button {
-  display: flex;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: rgb(221, 230, 223);
-  background-color: #08a80d;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
+	display: flex;
+	padding: 15px 25px;
+	font-size: 24px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: rgb(221, 230, 223);
+	background-color: #08a80d;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
 }
 
-.learnmore__button:hover {background-color: #0bc911}
+.learnmore__button:hover {
+	background-color: #0bc911;
+}
 
 .learnmore__button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+	background-color: #3e8e41;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
 }
