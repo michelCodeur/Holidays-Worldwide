@@ -1,72 +1,85 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import SearchResults from '../SearchResults/SearchResults';
 import Form from '../Form/Form';
+import './HolidaysList.css';
 
 function HolidaysList() {
+	const [holidays, setHolidays] = useState([]);
 
-    const [holidays, setHolidays] = useState([]);
+	const searchOptions = {
+		key: process.env.REACT_APP_HOLIDAYS_API_KEY,
+		api: 'https://calendarific.com/api/v2',
+	};
+	const [searchcountry, setSearchCountry] = useState('BJ');
+	const [searchyear, setSearchYear] = useState('2005');
+	const [searchString, setSearchString] = useState('');
 
-    const searchOptions = {
-			key: process.env.REACT_APP_HOLIDAYS_API_KEY,
-			api: 'https://calendarific.com/api/v2',
-		};
-		const [searchcountry, setSearchCountry] = useState('BJ');
-		const [searchyear, setSearchYear] = useState('2005');
-		const [searchString, setSearchString] = useState('');
+	function getResults(searchString) {
+		const url = `${searchOptions.api}/holidays?api_key=${searchOptions.key}&country=${searchcountry}&year=${searchyear}`;
 
-		function getResults(searchString) {
-			const url = `${searchOptions.api}/holidays?api_key=${searchOptions.key}&country=${searchcountry}&year=${searchyear}`;
+		console.log(url);
 
-			console.log(url);
+		fetch(url)
+			.then((response) => response.json())
+			.then((response) => {
+				setHolidays(response.response.holidays);
 
-			fetch(url)
-				.then((response) => response.json())
-				.then((response) => {
-					setHolidays(response.response.holidays);
+				console.log(response.response.holidays);
 
-					console.log(response.response.holidays);
+				setSearchCountry(searchcountry);
+				setSearchYear(searchyear);
+				setSearchString('');
+			})
+			.catch(console.error);
+	}
 
-					setSearchCountry(searchcountry);
-					setSearchYear(searchyear);
-					setSearchString('');
-				})
-				.catch(console.error);
-		}
+	function handleCountry(event) {
+		setSearchCountry(event.target.value);
+	}
 
-		function handleCountry(event) {
-			setSearchCountry(event.target.value);
-		}
+	function handleYear(event) {
+		setSearchYear(event.target.value);
+	}
 
-		function handleYear(event) {
-			setSearchYear(event.target.value);
-		}
+	function handleSubmit(event) {
+		event.preventDefault();
+		getResults();
+	}
 
-		function handleSubmit(event) {
-			event.preventDefault();
-			getResults();
-		}
-   if (!holidays) {
-			return <h3>There are no holidays to display</h3>;
-		}
+    
+	if (!holidays) {
+		return <h3>There are no holidays to display</h3>;
+	}
 
-		return (
-			<div className='show__page'>
-				<Form
-					holidays={holidays}
-					handleCountry={handleCountry}
-					handleYear={handleYear}
-					handleSubmit={handleSubmit}
-					searchcountry={searchcountry}
-					searchyear={searchyear}
-				/>
-				<SearchResults
-					holidays={holidays}
-					
-				/>
-			</div>
-		);
-			
-		
+	return (
+		<div className='show__page'>
+			<Form
+				holidays={holidays}
+				handleCountry={handleCountry}
+				handleYear={handleYear}
+				handleSubmit={handleSubmit}
+				searchcountry={searchcountry}
+				searchyear={searchyear}
+				searchString={searchString}
+			/>
+			<SearchResults holidays={holidays} />
+
+			<span className='span__button'>
+				<button className='learnmore__button'>
+					<h2> LEARN MORE </h2>
+				</button>
+
+				<button className='home__button'>
+					<i className='fa fa-home'></i>
+					<h2>HOME</h2>
+				</button>
+				<button className='exit'>
+					<i className='fa fa-close'></i>
+					<h2>CLOSE</h2>
+				</button>
+			</span>
+		</div>
+	);
 }
 
 export default HolidaysList;

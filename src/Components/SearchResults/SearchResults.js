@@ -1,15 +1,10 @@
-import React, { useState } from 'react';
-import Form from '../Form/Form';
-import HolidaysList from '../HolidaysList/HolidaysList';
+import React from 'react';
+import './SearchResults.css'
 
-function SearchResults({
-	holidays
-	
-}) {
-	
 
-	
 
+function SearchResults({ holidays }) {
+	
 	return (
 		<div>
 			{holidays.map((holiday, index) => (

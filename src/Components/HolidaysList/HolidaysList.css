@@ -1,0 +1,80 @@
+span {
+	display: flex;
+	justify-content: space-around;
+}
+
+.learnmore__button
+.home__button
+.exit {
+    font-size: 20px; 
+	width: 100px;
+	height: 70px;
+	color: solid black;
+}
+
+.learnmore__button {
+	display: flex;
+	padding: 10px 15px;
+	cursor: pointer;
+	text-align: center;
+	outline: none;
+	background-color: #08a80d;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+}	
+.learnmore__button:hover {
+	background-color: #c9ac0b;
+}
+.learnmore__button:active {
+	background-color: #3e8e41;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
+
+.home__button {
+	padding: 10px 15px;
+	cursor: pointer;
+	text-align: center;
+	outline: none;
+	background-color: #08a80d;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+
+
+}
+
+.home__button:hover {
+	background-color: rgb(126, 119, 226);
+}
+.home__button:active {
+	background-color: #3e8e41;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+
+}
+
+.exit {
+	display: flex;
+	padding: 15px 25px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	background-color: #08a80d;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+
+}
+.exit:hover {
+	background-color: lightcoral;
+}
+
+.exit:active {
+	background-color: #3e8e41;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+
+}

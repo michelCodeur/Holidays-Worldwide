@@ -1,0 +1,12 @@
+.header {
+	background-color: rgb(40, 66, 100);
+	box-sizing: border-box;
+	border-bottom: 5px solid black;
+    color: rgb(226, 230, 210);
+    
+}
+
+.app {
+  text-align: center;
+ 
+}

@@ -34,17 +34,11 @@ function Form({
 					/>
 				</li>
 			</ul>
-			<span>
-				<button className='learnmore__button'>
-					<h2> Learn More </h2>
-				</button>
-				<button className='home__button'>Home</button>
-				<button className='showresults__button' type='submit'>
-					<h4>
-						SHOW <br /> RESULTS
-					</h4>
-				</button>
-			</span>
+			<button className='showresults__button' type='submit'>
+				<h4>
+					SHOW RESULTS
+				</h4>
+			</button>
 		</form>
 	);
 }
