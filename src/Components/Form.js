@@ -1,17 +1,18 @@
 import React from 'react';
 import "./Form.module.css";
 
-function Form({handleCountry, handleYear, handleSubmit }) {
+function Form({handleCountry, handleYear, handleSubmit, searchcountry, searchyear }) {
     return (
-			<form className='main__form'>
+			<form onSubmit={handleSubmit} className='main__form'>
 				<ul className='form__container'>
 					<li className='form__item'>
-						<label htmlFor='name'> Country Name : </label>
+						<label htmlFor='country'> Country Name : </label>
 						<input 
                         placeholder='2 Letters Country Code' type='text'
-                        name='searchString'
+                        name='country'
                         required
                         onChange={handleCountry}
+                        value={searchcountry}
                         
                         />
 					</li>
@@ -19,9 +20,10 @@ function Form({handleCountry, handleYear, handleSubmit }) {
 						<label htmlFor='year'> Year : </label>
 						<input placeholder='4 Digits YEAR' 
                         type='text' 
-                        name='searchString'
+                        name='year'
                         required
                         onChange={handleYear}
+                        value={searchyear}
                         />
 					</li>
 				</ul>
@@ -31,7 +33,7 @@ function Form({handleCountry, handleYear, handleSubmit }) {
 					</button>
 					<button className='home__button'>Home</button>
 					<button className='showresults__button' type='submit'
-                    onClick={handleSubmit}>
+                    >
 						<h4>
 							SHOW <br /> RESULTS
 						</h4>
