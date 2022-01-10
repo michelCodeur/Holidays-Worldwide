@@ -3,19 +3,25 @@ import SearchResults from '../SearchResults/SearchResults';
 import Form from '../Form/Form';
 import './HolidaysList.css';
 
+
 function HolidaysList() {
-	const [holidays, setHolidays] = useState([]);
+
+	
+	const [holidays, setHolidays] = useState(null);
+	const [searchcountry, setSearchCountry] = useState();
+	const [searchyear, setSearchYear] = useState();
+	const [searchString, setSearchString] = useState('');
+	const [lastString, setLaststring] = useState('');
+	
 
 	const searchOptions = {
 		key: process.env.REACT_APP_HOLIDAYS_API_KEY,
-		api: 'https://calendarific.com/api/v2',
+		api: 'https://calendarific.com/api/v2/holidays?',
+		
 	};
-	const [searchcountry, setSearchCountry] = useState('BJ');
-	const [searchyear, setSearchYear] = useState('2005');
-	const [searchString, setSearchString] = useState('');
 
-	function getResults(searchString) {
-		const url = `${searchOptions.api}/holidays?api_key=${searchOptions.key}&country=${searchcountry}&year=${searchyear}`;
+	function getResults() {
+		const url = `${searchOptions.api}api_key=${searchOptions.key}&country=${searchcountry}&year=${searchyear}`;
 
 		console.log(url);
 
@@ -29,6 +35,7 @@ function HolidaysList() {
 				setSearchCountry(searchcountry);
 				setSearchYear(searchyear);
 				setSearchString('');
+				setLaststring(lastString);
 			})
 			.catch(console.error);
 	}
@@ -46,13 +53,11 @@ function HolidaysList() {
 		getResults();
 	}
 
-    
-	if (!holidays) {
-		return <h3>There are no holidays to display</h3>;
-	}
+	
+
 
 	return (
-		<div className='show__page'>
+		<div>
 			<Form
 				holidays={holidays}
 				handleCountry={handleCountry}
@@ -61,23 +66,13 @@ function HolidaysList() {
 				searchcountry={searchcountry}
 				searchyear={searchyear}
 				searchString={searchString}
+				lastString={lastString}
+			
 			/>
-			<SearchResults holidays={holidays} />
-
-			<span className='span__button'>
-				<button className='learnmore__button'>
-					<h2> LEARN MORE </h2>
-				</button>
-
-				<button className='home__button'>
-					<i className='fa fa-home'></i>
-					<h2>HOME</h2>
-				</button>
-				<button className='exit'>
-					<i className='fa fa-close'></i>
-					<h2>CLOSE</h2>
-				</button>
-			</span>
+			<SearchResults
+				holidays={holidays}
+			/>
+			
 		</div>
 	);
 }
