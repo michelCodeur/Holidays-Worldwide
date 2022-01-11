@@ -23,7 +23,7 @@ function LearnMore(props) {
 			</strong>
 			<button className='home__button' type='submit'>
 				<i class='fa fa-home'></i>
-				<Link to='/home'>
+				<Link to='/'>
 					<h2>HOME</h2>
 				</Link>
 			</button>

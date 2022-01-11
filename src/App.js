@@ -22,7 +22,7 @@ function App() {
 			<main>
 				<Routes>
 					<Route path='/learn-more' element={<LearnMore />} />
-					<Route path='/home' element={<Home />} />
+					<Route path='/' element={<Home />} />
 				</Routes>
 			</main>
 		</div>
