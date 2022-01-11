@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+Project Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My app is called Holidays Worldwide and as its name implies, it's a collection of holidays information for 230 countries and 3000 states around the world. Users can type in a specific country or state and get all the information related to their holidays and also a brief description of the holiday's meaning for that country. As the API is constantly updating its information, English is the default language for accessing the information but other local languages are available depending on the state or country.
 
-## Available Scripts
 
-In the project directory, you can run:
+API Used
+https://calendarific.com/api-documentation
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Technologies Used
+Visual Studio
+CSS
+JavaScript
+React
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+Installation Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Note: This app was created using Visual Studio Code Version 1.60.1. Fork and clone the repo using either SSH or HTTPS in a directory of your choice.
 
-### `npm run build`
+In terminal:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+$ git clone [SSH/HTTPS KEY]
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+fork and clone the repo
+cd into the repo
+Open the entire folder in VScode
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![App_screenshot-1](https://user-images.githubusercontent.com/65869570/148974864-687ea7e2-87fd-43c2-97d1-ce4a39eef77e.jpg)
+![App_screenshot-2](https://user-images.githubusercontent.com/65869570/148974891-fe208aa9-01b1-42ad-b485-3cd34b93c30b.jpg)
+![App_screenshot-3](https://user-images.githubusercontent.com/65869570/148974909-91ff8d44-9def-436e-b3d8-938712d9ef8e.jpg)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+App Components
+![App_Components](https://user-images.githubusercontent.com/65869570/148982354-70f69fd4-8070-473d-81b2-08e3f9a23e49.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+ User Stories
+> As a user, I want to see a listing of all the holidays that people of a particular part of the globe celebrate. 
+> As a user, I want to see a description of the holiday and its meaning for that particular state or country.
+> As a user, I want to navigate between holidays on a phone or tablet and compare holiday celebrations differences between two or more countries.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### MVP Goals
+As a user, I want to search for holidays by name so I can compare for exemple who does or doesn't celebrate Christmas around the world.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### Stretch Goals
+As a user, I want to search for holidays historically and futuristically until 2049.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
