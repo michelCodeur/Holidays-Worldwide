@@ -1,18 +1,10 @@
 import React from 'react';
-import Home from '../Header/Home';
-import './SearchResults.css';
-
-
 
 function SearchResults({ holidays }) {
-
 	if (!holidays) {
-		return <>
-		</>;
-		
+		return <></>;
 	}
 
-	
 	return (
 		<section className='results__card'>
 			{holidays.map((holiday, index) => (

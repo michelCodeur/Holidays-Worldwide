@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Form.css";
+import './Form.css';
 
 function Form({
 	handleCountry,
@@ -7,10 +7,7 @@ function Form({
 	handleSubmit,
 	searchcountry,
 	searchyear,
-	
 }) {
-
-
 	return (
 		<form onSubmit={handleSubmit} className='main__form'>
 			<ul className='form__container'>
@@ -38,9 +35,7 @@ function Form({
 				</li>
 			</ul>
 			<button className='showresults__button' type='submit'>
-				<h4>
-					SHOW RESULTS
-				</h4>
+				<h4>SHOW RESULTS</h4>
 			</button>
 		</form>
 	);

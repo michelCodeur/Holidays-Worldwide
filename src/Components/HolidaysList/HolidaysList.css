@@ -13,7 +13,6 @@ span {
 }
 
 .learnmore__button {
-	display: flex;
 	padding: 10px 15px;
 	cursor: pointer;
 	text-align: center;
@@ -22,14 +21,18 @@ span {
 	border: none;
 	border-radius: 15px;
 	box-shadow: 0 9px #999;
+	text-decoration: none;
+	
 }	
 .learnmore__button:hover {
 	background-color: #c9ac0b;
+	text-decoration: none;
 }
 .learnmore__button:active {
 	background-color: #3e8e41;
 	box-shadow: 0 5px #666;
 	transform: translateY(4px);
+	text-decoration: none;
 }
 
 .home__button {
@@ -41,45 +44,19 @@ span {
 	border: none;
 	border-radius: 15px;
 	box-shadow: 0 9px #999;
+	text-decoration: none;
 
 
 }
 
 .home__button:hover {
 	background-color: rgb(126, 119, 226);
+	text-decoration: none;
 }
 .home__button:active {
 	background-color: #3e8e41;
 	box-shadow: 0 5px #666;
 	transform: translateY(4px);
-
-}
-
-.exit {
-    position: absolute;
-	top: -10px;
-	right: -10px;
-	margin-right: 15px;
-	padding: 0px 10px;
-	width: 60px;
-	height: 30px;
-	cursor: pointer;
-	text-align: center;
 	text-decoration: none;
-	outline: none;
-	background-color: #08a80d;
-	border: none;
-	border-radius: 10px;
-	
-
-}
-.exit:hover {
-	background-color: lightcoral;
-}
-
-.exit:active {
-	background-color: #3e8e41;
-	box-shadow: 0 5px #666;
-	transform: translateY(4px);
 
 }
