@@ -1,0 +1,62 @@
+span {
+	display: flex;
+	justify-content: space-around;
+}
+
+.learnmore__button
+.home__button
+{
+    font-size: 20px; 
+	width: 100px;
+	height: 70px;
+	color: solid black;
+}
+
+.learnmore__button {
+	padding: 10px 15px;
+	cursor: pointer;
+	text-align: center;
+	outline: none;
+	background-color: #08a80d;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+	text-decoration: none;
+	
+}	
+.learnmore__button:hover {
+	background-color: #c9ac0b;
+	text-decoration: none;
+}
+.learnmore__button:active {
+	background-color: #3e8e41;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+	text-decoration: none;
+}
+
+.home__button {
+	padding: 10px 15px;
+	cursor: pointer;
+	text-align: center;
+	outline: none;
+	background-color: #08a80d;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+	text-decoration: none;
+
+
+}
+
+.home__button:hover {
+	background-color: rgb(126, 119, 226);
+	text-decoration: none;
+}
+.home__button:active {
+	background-color: #3e8e41;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+	text-decoration: none;
+
+}
